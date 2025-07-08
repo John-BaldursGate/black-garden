@@ -19,8 +19,6 @@ dnf5 install -y btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-rpm-ostree kargs --append=rd.luks.options=discard
-
 #### Example for enabling a System Unit File
 
 #systemctl enable podman.socket

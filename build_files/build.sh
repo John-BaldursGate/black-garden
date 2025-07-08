@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam steam-devices virt-install virt-manager virt-top virt-viewer wine
+dnf5 install -y btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam steam-devices virt-install virt-manager virt-top virt-viewer wine -y
 
 # Use a COPR Example:
 #
@@ -19,6 +19,8 @@ dnf5 install -y btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+rpm-ostree kargs --append=rd.luks.options=discard
+
 #### Example for enabling a System Unit File
 
-systemctl enable podman.socket
+#systemctl enable podman.socket

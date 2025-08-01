@@ -10,10 +10,10 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # remove unwanted packages
-dnf5 remove -y firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control
+dnf5 remove firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control -y
 
 # this installs a package from fedora repos
-dnf5 install -y btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam steam-devices virt-install virt-manager virt-top virt-viewer wine -y
+dnf5 install btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam steam-devices virt-install virt-manager virt-top virt-viewer wine -y
 
 # Use a COPR Example:
 #

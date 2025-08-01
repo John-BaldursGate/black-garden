@@ -9,11 +9,12 @@ set -ouex pipefail
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+# remove unwanted packages
+dnf5 remove -y firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control
+
 # this installs a package from fedora repos
 dnf5 install -y btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam steam-devices virt-install virt-manager virt-top virt-viewer wine -y
 
-# remove unwanted packages
-dnf5 uninstall -y firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging

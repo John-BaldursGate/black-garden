@@ -15,6 +15,12 @@ dnf5 remove firefox firefox-langpacks gnome-software gnome-software-ostree gnome
 # this installs a package from fedora repos
 dnf5 install btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam steam-devices virt-install virt-manager virt-top virt-viewer wine -y
 
+dnf5 -y copr enable atim/heroic-games-launcher
+dnf5 -y copr enable ilyaz/LACT
+dnf5 -y install heroic-games-launcher-bin
+dnf5 -y install lact
+dnf5 -y copr disable atim/heroic-games-launcher
+dnf5 -y copr disable ilyaz/LACT
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
@@ -25,3 +31,4 @@ dnf5 install btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-net
 #### Example for enabling a System Unit File
 
 #systemctl enable podman.socket
+systemctl enable lactd

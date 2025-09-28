@@ -4,7 +4,7 @@ COPY build_files /
 
 # Base Image
 #FROM ghcr.io/ublue-os/bazzite:stable
-FROM fedora:fedora/43/x86_64/silverblue
+FROM quay.io/fedora/fedora-bootc:43
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest

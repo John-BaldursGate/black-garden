@@ -20,11 +20,13 @@ dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 dnf5 -y install steam
 dnf5 -y remove rpmfusion-free-release rpmfusion-nonfree-release
 
-dnf5 -y copr enable atim/heroic-games-launcher
+dnf5 -y install https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.18.1/Heroic-2.18.1-linux-x86_64.rpm
+
+#dnf5 -y copr enable atim/heroic-games-launcher
 dnf5 -y copr enable ilyaz/LACT
-dnf5 -y install heroic-games-launcher-bin
+#dnf5 -y install heroic-games-launcher-bin
 dnf5 -y install lact
-dnf5 -y copr disable atim/heroic-games-launcher
+#dnf5 -y copr disable atim/heroic-games-launcher
 dnf5 -y copr disable ilyaz/LACT
 # Use a COPR Example:
 #

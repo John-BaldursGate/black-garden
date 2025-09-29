@@ -19,7 +19,8 @@ dnf5 install dnf5-plugins btop distrobox fastfetch libguestfs-tools libvirt-daem
 dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 dnf5 -y install steam
 dnf5 -y remove rpmfusion-free-release rpmfusion-nonfree-release
-
+rm /opt
+mkdir /opt
 dnf5 -y install https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.18.1/Heroic-2.18.1-linux-x86_64.rpm
 
 #dnf5 -y copr enable atim/heroic-games-launcher

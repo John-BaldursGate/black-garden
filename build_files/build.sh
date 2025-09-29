@@ -20,9 +20,9 @@ dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release
 dnf5 -y install steam
 dnf5 -y remove rpmfusion-free-release rpmfusion-nonfree-release
 
-#rm /opt
-#mkdir /opt
-mkdir -p "/var/opt" && ln -s "/var/opt" "/opt"
+rm /opt
+mkdir /opt
+#mkdir -p "/var/opt" && ln -s "/var/opt" "/opt"
 dnf5 -y install https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.18.1/Heroic-2.18.1-linux-x86_64.rpm
 
 #dnf5 -y copr enable atim/heroic-games-launcher

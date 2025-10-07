@@ -10,10 +10,10 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # remove unwanted packages
-dnf5 remove firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control htop nvtop -y
+dnf5 remove firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control -y
 
 # this installs a package from fedora repos
-dnf5 install dnf5-plugins btop distrobox fastfetch libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm mangohud python3-libguestfs qemu-kvm rocm-smi steam-devices virt-install virt-manager virt-top virt-viewer wine -y
+dnf5 install dnf5-plugins btop distrobox fastfetch gamescope mangohud rocm-smi steam-devices wine libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm python3-libguestfs qemu-kvm virt-install virt-manager virt-top virt-viewer -y
 
 # rpm fusion
 dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -24,6 +24,7 @@ rm /opt
 mkdir /opt
 #mkdir -p "/var/opt" && ln -s "/var/opt" "/opt"
 dnf5 -y install https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/releases/download/v2.18.1/Heroic-2.18.1-linux-x86_64.rpm
+#dnf5 -y install https://kojipkgs.fedoraproject.org//packages/gamescope/3.16.2/1.fc42/x86_64/gamescope-3.16.2-1.fc42.x86_64.rpm
 
 #dnf5 -y copr enable atim/heroic-games-launcher
 dnf5 -y copr enable ilyaz/LACT

@@ -13,7 +13,7 @@ set -ouex pipefail
 dnf5 remove firefox firefox-langpacks gnome-software gnome-software-ostree gnome-tour yelp malcontent-control -y
 
 # this installs a package from fedora repos
-dnf5 install dnf5-plugins atool btop distrobox fastfetch gamescope mangohud rocm-smi steam-devices wine libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm python3-libguestfs qemu-kvm virt-install virt-manager virt-top virt-viewer -y
+dnf5 install dnf5-plugins atool 7zip btop distrobox fastfetch gamescope mangohud rocm-smi steam-devices wine libguestfs-tools libvirt-daemon-config-network libvirt-daemon-kvm python3-libguestfs qemu-kvm virt-install virt-manager virt-top virt-viewer -y
 
 # rpm fusion
 dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
